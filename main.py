@@ -26,6 +26,7 @@ def run(filename: str) -> None:
     file = open(filename)
     for line in file:
         data.append(line)
+        
     # Use `filter_nondigits` to clean the data and remove invalid entries, save the output to a new variable
     data = filter_nondigits(data)
 
@@ -42,7 +43,6 @@ def run(filename: str) -> None:
     std_dev_hr = standard_deviation(data)
 
     # return all 3 values
-    print(avg_hr, max_hr, std_dev_hr)
     return avg_hr, max_hr, std_dev_hr
 
 
